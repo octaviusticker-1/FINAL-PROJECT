@@ -451,4 +451,251 @@ a {
     text-align: center;
 }
 
+.pricing-card.featured{
+    border-color: var(--primary);
+    position: relative;
+}
+.featured-badge{
+    position:absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
 
+.pricing-badge{
+    font-weight: 700;
+}
+
+.pricing-card .price{
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.pricing-card .price span{
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.pricing-features{
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.pricing-features li{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+/* blog section */
+.blog-grid{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.blog-posts{
+    display: grid;
+    gap: 30px;
+}
+
+.blog-post{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.blog-post img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.blog-post-content{
+    padding: 20px;
+}
+
+.sidebar{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    height: fit-content;
+}
+
+.sidebar h3{
+    margin-bottom: 15px;
+} 
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar li{
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.sidebar a{
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.sidebar a{
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.sidebar a:hover{
+    color: var(--primary);
+}
+
+/* gallery section */
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gallery-item.wide{
+    grid-column: span 2;
+}
+
+/* contact section */
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+}
+
+.contact-info-box{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-info-box h3{
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.contact-form{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.form-group{
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-group textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* FAQ */
+.faq-item{
+    background: var(--Light-gray);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.faq-item h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.faq-item p{
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* responsive design (mobile) */
+@media (max-width: 768px){
+    .nav-links{
+        display: none;
+    }
+    .hero h1{
+        font-size: 28px;
+    }
+    .three-column,
+    .two-column,
+    .blog-grid,
+    .pricing-grid
+    .gallery-grid,
+    .contact-grid,
+    .footer-grid{
+        grid-template-columns: 1fr;
+    }
+    .blog-post{
+        grid-template-columns: 1fr;
+    }
+    .newsletter form{
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsletter input{
+        width: 100%;
+        max-width: 300px;
+    }
+    .client-logos{
+        gap: 20px;
+    }
+    .form-row{
+        grid-template-columns: 1fr;
+    }
+
+}
